@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 799px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    background-color: black;
+    color: white;
+}
+#container{
+    width: 1000px;
+    min-height: 700px;
+    text-align: center;
+    border: white 1px solid;
+    
+}
+h1{
+    height: 50px;
+    padding: 10px;
+    background-color: crimson;
+}
+#what, #demo{
+    width: 500px;
+    float: left;
+    height: 50px;
+}
+#content{
+    margin: 80px;
+    width:800px;
+    height: 420px;
+    border: black 1px solid;
+    padding: 20px;
+
+}
+article{
+    text-align: justify;
+    margin: 60px;
+    border: black 1px solid;
+}
+.cipher, .decipher{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+}
+
+footer{
+    background-color: dimgrey;
+    color: floralwhite;
+    
+    
+}
