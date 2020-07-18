@@ -1,6 +1,5 @@
-//import cipher from './cipher.js';
-//console.log(cipher);
-//Hay manera de simplifar esto? hasta la línea 8?
+import cipher from './cipher.js';
+//Hay manera de simplifar esto?
 document.getElementById('demoOptions').style.display='none';
 document.getElementById('getNumberCipher').style.display='none';
 document.getElementById('getNumberDecipher').style.display='none';
@@ -58,4 +57,12 @@ document.getElementById('showInputDecipher').addEventListener("click",function s
     document.getElementById('decipherView').style.display='block';    
     });
 
-
+document.getElementById('cipher').addEventListener("click", function(){
+    let numberCipher=document.getElementById('numberCipher').value
+    //convirtiendo numpherCipher en number
+    numberCipher = numberCipher-0;
+    let textToCipher=document.getElementById('textToCipher').value;
+    let textCipher = new Array();
+    textCipher = cipher.encode(numberCipher,textToCipher);
+    document.getElementById('result').innerHTML=textCipher.join('');
+});
