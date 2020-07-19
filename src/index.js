@@ -45,24 +45,35 @@ while (j--)
     });
 
 document.getElementById('showInputCipher').addEventListener("click",function showInputCipher(){
-    let numberCipher=document.getElementById('numberCipher').value;
-    alert(numberCipher);
+    const numberCipher=document.getElementById('numberCipher').value-0;
+    if(numberCipher>0){
     document.getElementById('getNumberCipher').style.display='none';
-    document.getElementById('cipherView').style.display='block';  
+    document.getElementById('cipherView').style.display='block'; 
+    }else{
+        alert(numberCipher+" No es un número válido, por favor ingrese un número mayor a 0");
+    } 
     });
 document.getElementById('showInputDecipher').addEventListener("click",function showInputDecipher(){
-    let numberDecipher=document.getElementById('numberDecipher').value;
-    alert(numberDecipher);
+    const numberDecipher=document.getElementById('numberDecipher').value-0;
+    if(numberDecipher>0){
     document.getElementById('getNumberDecipher').style.display='none';
-    document.getElementById('decipherView').style.display='block';    
+    document.getElementById('decipherView').style.display='block';
+    }else{
+        alert(numberDecipher+" No es un número válido, por favor ingrese un número mayor a 0");
+    }    
     });
 
 document.getElementById('cipher').addEventListener("click", function(){
-    let numberCipher=document.getElementById('numberCipher').value
-    //convirtiendo numpherCipher en number
-    numberCipher = numberCipher-0;
+    const numberCipher=document.getElementById('numberCipher').value-0;
     let textToCipher=document.getElementById('textToCipher').value;
     let textCipher = new Array();
     textCipher = cipher.encode(numberCipher,textToCipher);
-    document.getElementById('result').innerHTML=textCipher.join('');
+    document.getElementById('textCipher').innerHTML=textCipher.join('');
+});
+document.getElementById('decipher').addEventListener("click", function(){
+    const numberDecipher=document.getElementById('numberDecipher').value-0;
+    let textToDecipher=document.getElementById('textToDecipher').value;
+    let textDecipher = new Array();
+    textDecipher = cipher.decode(numberDecipher,textToDecipher);
+    document.getElementById('textDecipher').innerHTML=textDecipher.join('');
 });
