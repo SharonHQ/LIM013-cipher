@@ -7,8 +7,6 @@ document.getElementById("decipherView").style.display = "none";
 let clear = () => {
   document.getElementById("numberCipher").value = "";
   document.getElementById("numberDecipher").value = "";
-  document.getElementById("textCipher").value = "";
-  document.getElementById("textDecipher").value = "";
   document.getElementById("textToCipher").value = "";
   document.getElementById("textToDecipher").value = "";
 };
