@@ -2,72 +2,111 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Hidden</title>
+    <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="container">
-      <h1>HIDDEN</h1>
+      <header>
+        <h1><span class="sub">H</span>IDDEN</h1>
+      </header>
       <div id="sectionButtons">
-        <button id="what">¿De qué trata?</button>
         <button id="demo">Demo</button>
+        <button id="about">About</button>
       </div>
       <div id="content">
-        <div id="contentWhat">
-        <h2>¿QUÉ ES HIDDEN?</h2>
-        <article>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit vel adipisci, eos voluptates iusto iste similique a quibusdam ipsum nesciunt hic voluptate amet quo. Asperiores perferendis incidunt minima ratione.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit, facere consequuntur beatae molestias explicabo vitae, distinctio officiis voluptate sapiente aliquam praesentium commodi deleniti quos labore est quaerat, incidunt animi?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quia quod quae vitae nihil modi voluptatum, pariatur numquam ipsa repellendus ea, obcaecati consequatur a dicta. Error a corporis mollitia voluptas.</p>
-        </article>
-        <button class="cipher">Cifrar</button>
-        <button class="decipher">Descifrar</button>
+        <div id="contentAbout" class="showHide">
+          <article>
+            <p>
+              With <strong>Hidden</strong>, you can encode and decode any text.
+            </p>
+            <p>Using it is very easy:</p>
+            <p>
+              <strong> To code: </strong>Enter a valid number, and on the next
+              screen enter the text you want to code.
+            </p>
+            <p>
+              <strong>To decode: </strong>Enter the number they already gave
+              you, and on the next screen enter the text you want to decode.
+            </p>
+            <p>This adventure begins!</p>
+          </article>
+          <button class="cipher">Encode</button>
+          <button class="decipher">Decode</button>
         </div>
         <div id="contentDemo">
-          <div id="demoOptions">
-            <p>¡Vamos a descubir!</p>
-            <p>¿Qué quieres hacer?</p>
-            <button class="cipher">Cifrar</button>
-            <button class="decipher">Descifrar</button>
+          <div id="demoOptions" class="showHide">
+            <h2>LET'S START!</h2>
+            <h3>What do you want to do?</h3>
+            <button class="cipher">Encode</button>
+            <button class="decipher">Decode</button>
           </div>
           <div id="getNumber">
-          <div id="getNumberCipher">
-            <h2>Vas a cifrar</h2>
-            <p>Ingrese el número, recuerda darle este número a quien le envies el texto cifrado</p>
-            <input id="numberCipher" type="number" /><br>
-            <button id="showInputCipher">Vamos allá!</button>
+            <div id="getNumberCipher" class="showHide">
+              <h2>You are going to encode!</h2>
+              <p>
+                Enter a valid number, remember this number to decode your text
+                later.
+              </p>
+              <input id="numberCipher" type="number" /><br />
+              <button id="showInputCipher">Next</button>
+            </div>
+            <div id="getNumberDecipher" class="showHide">
+              <h2>You are going to decode!</h2>
+              <p>Enter your secret number</p>
+              <input type="number" id="numberDecipher" /><br />
+              <button id="showInputDecipher">Next</button>
+            </div>
           </div>
-          <div id="getNumberDecipher">
-            <h2>Vas a descifrar</h2>
-            <p>Ingresa el número secreto</p>
-            <input type="number" id="numberDecipher"><br>
-            <button id="showInputDecipher">Vamos allá!</button>
+          <div id="cipherView" class="showHide">
+            <p>
+              <span class="material-icons">lock_open</span> Enter your text to
+              encode
+            </p>
+            <!---->
+            <textarea id="textToCipher" type="text"></textarea><br />
+
+            <p>
+              <span class="material-icons">lock</span> This is your encoded text
+            </p>
+            <textarea readonly id="textCipher"></textarea><br />
+            <button id="copyCipher">
+              <span class="material-icons">content_copy</span>
+            </button>
           </div>
-          </div>
-          <div id="cipherView">
-            <h2>Empieza a Cifrar</h2>
-            <p>Ingrese Texto</p>
-            <input id="textToCipher" type="text"><br>
-            <button id="cipher">Cifrar</button>
-            <p>Este es tu texto cifrado</p>
-            <span id="textCipher">Result:</span><br>
-            <button>Copiar al portapapeles</button>
-            <p>¡Gracias por utilizarme!</p>
-          </div>
-          <div id="decipherView">
-            <h2>Descubre el mensaje oculto</h2>
-            <p>Ingrese Texto a descifrar</p>
-            <input id="textToDecipher" type="text"><br>
-            <button id="decipher">Descifrar</button>
-            <p>Este es tu texto descifrado</p>
-            <span id="textDecipher">Result:</span><br>
-            <button>Copiar al portapapeles</button>
-            <p>¡Gracias por utilizarme!</p>
+          <div id="decipherView" class="showHide">
+            <p>
+              <span class="material-icons">lock</span> Enter your text to decode
+            </p>
+            <textarea id="textToDecipher" type="text"></textarea><br />
+
+            <p>
+              <span class="material-icons">lock_open</span> This is your decoded
+              text
+            </p>
+            <textarea readonly id="textDecipher"></textarea><br />
+            <button id="copyDecipher">
+              <span class="material-icons">content_copy</span>
+            </button>
           </div>
         </div>
       </div>
-      <footer>By Sharon with &hearts; Credits: &lt;Laboratoria&gt;</footer>
     </div>
+    <!--<footer>By Sharon with &hearts; Credits: &lt;Laboratoria&gt;</footer>-->
     <script src="index.js" type="module"></script>
   </body>
 </html>

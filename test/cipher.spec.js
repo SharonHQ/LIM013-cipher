@@ -7,7 +7,7 @@
 import cipher from '../src/cipher';
 
 describe('cipher', () => {
-
+  //Propiedades de un objeto
   it('should be an object', () => {
     expect(typeof cipher).toBe('object');
   });
