@@ -33,7 +33,7 @@ $ npm start
 ## 2. Resumen del proyecto
 **Hidden** es una aplicación web que tiene como objetivo codificar y descodificar texto con la técnica de [*Cifrado César*](https://en.wikipedia.org/wiki/Caesar_cipher), que consiste en la sustitución de cada letra de un texto por otro, mediante un número de desplazamiento. En esta versión, solo se recibe como número de desplazamiento, números positivos y diferentes a un múltiplo de 26, y en textos a codificar y descodificar, estos se convierten en mayúsculas, exceptuan la letra ñ, caracteres y respeta los espacios en blanco.
 
-<img src="src/images/prototype/viewStart.png" alt="viewStart" width="500"/>
+<img src="src/images/prototype/viewStart.PNG" alt="viewStart" width="500"/>
 <img src="src/images/prototype/viewAbout.png" alt="viewAbout" width="500"/>
 <img src="src/images/prototype/viewEncode_1.png" alt="viewEncodeNumber" width="500"/>
 <img src="src/images/prototype/viewEncode_2.png" alt="viewEncodeText" width="500"/>
